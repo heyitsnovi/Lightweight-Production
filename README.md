@@ -40,6 +40,7 @@ After setting up your .env file, Go to your browser and type:
 ```
 http://localhost/lightweight-prod/
 
+```
 
 Router File location:
 
