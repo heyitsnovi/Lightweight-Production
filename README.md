@@ -10,7 +10,7 @@ Installing LightWeight
 Clone the repository to your xampp "htdocs" directory or to your wampp "www" directory:
 
 ```bash
-  git clone https://github.com/heyitsnovi/LightWeight.git
+  git clone https://github.com/heyitsnovi/Lightweight-Production.git
 ```
 Then go to LightWeight directory and run
 
@@ -24,37 +24,22 @@ After Installation configure the .env file with your database credentials and  P
 ```
 # Please Modify These Settings According To Your Set Up
 
-PROJECT_BASEURL = http://localhost/Lightweight/
-MYSQL_HOST		= localhost
-MYSQL_USERNAME  = root
+PROJECT_BASEURL = "http://localhost/lightweight-prod/"
+MYSQL_HOST	= 
+MYSQL_USERNAME  = 
 MYSQL_PASSWORD  = 
-MYSQL_DATABASE  = lightweight_demo
-MYSQL_CHARSET   = utf8
-MYSQL_COLLATION = utf8_unicode_ci
+MYSQL_DATABASE  = 
+MYSQL_CHARSET   = "utf8"
+MYSQL_COLLATION = "utf8_unicode_ci"
 MYSQL_PREFIX	= 
+DB_DRIVER	= "mysql"
 
 ```
 After setting up your .env file, Go to your browser and type:
 
 ```
-http://localhost/LightWeight/
+http://localhost/lightweight-prod/
 
-```
-Sample Pages:
-
-```
-HOME:
-http://localhost/LightWeight/ 
-
-TEST Pages
-http://localhost/LightWeight/testpage
-
-TEST FORM
-http://localhost/LightWeight/testform
-
-TEST View Using Twig Templating Engine
-http://localhost/Lightweight/twigified-example
-```
 
 Router File location:
 
@@ -69,23 +54,12 @@ Default Controller File location:
 app/controllers/Home.php
 ```
 
-Default Models File location:
-
-```
-app/models/Names.php
-```
 
 Default Views File location:
 
 ```
 app/views/default.php
 
-```
-
-Demo Views location (Both Ordinary Views and Twig Template):
-
-```
-app/views/demo
 ```
 
 Default 404 View location:
