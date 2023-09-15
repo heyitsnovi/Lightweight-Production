@@ -1,0 +1,43 @@
+body{
+    background-color: #303b4b;
+    font-family: 'Roboto';
+}
+.msg{
+    text-align: center;
+    font-size: 36px;
+    margin-top: 150px;
+    color: whitesmoke;
+}
+.text-bottom{
+    text-align: center;
+    color: whitesmoke;
+}
+.psubtitle{
+    text-align: center;
+    font-size: 16px;
+    color: whitesmoke;
+}
+.small{
+    text-align: center;
+    color: whitesmoke;
+}
+.link-github{
+    color: whitesmoke;
+}
+
+.link-github:hover{
+    color: rgb(177, 255, 196);
+}
+.link-home{
+    color: whitesmoke;
+}
+
+.link-home:hover{
+    color: rgb(177, 255, 196);
+}
+.msg404{
+    text-align: center;
+    font-size: 36px;
+    margin-top: 100px;
+    color: whitesmoke;
+}

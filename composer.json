@@ -1,0 +1,25 @@
+{
+	"autoload": {
+        "classmap": [
+           
+        ],
+        "files":[
+           "core/Helper.php"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Controllers\\": "app/controllers",
+            "Core\\Models\\":       "app/models",
+            "Core\\":"core/",
+            "Libraries\\":"app/libraries"
+        }
+    },
+	"require": {
+		"bramus/router": "~1.6",
+		"illuminate/database": "^8.83",
+		"illuminate/events": "^8.83",
+		"rakit/validation": "^1.4",
+		"voku/anti-xss": "^4.1",
+        "twig/twig":"^3.0"
+	}
+}
