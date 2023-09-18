@@ -248,3 +248,10 @@ function getData($index_name){
 
     return $_GET[$index_name];
 }
+
+
+function current_url(){
+    
+    $url_instance = new Url();
+    return $url_instance->current_url();
+}
