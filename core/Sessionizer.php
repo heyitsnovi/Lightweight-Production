@@ -47,23 +47,6 @@ class Sessionizer {
 	}
 
 
-	public function form_errors($field){
-
-		$messages = '';
-
-		if( isset($_SESSION['lightweight_form_errors'][$field])){
-			foreach($_SESSION['lightweight_form_errors'][$field]  as $errors){
-				
-				$messages.=$errors;
-			}
-
-			unset($_SESSION['lightweight_form_errors'][$field]);
-		}
-
-		return $messages;
-	}
-
-
 	public function input_value($key){
 
 			if(isset($_SESSION['post_data_'.$key])){

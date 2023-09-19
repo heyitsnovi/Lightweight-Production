@@ -20,12 +20,6 @@ function redirect($url) {
     return $redir_obj->redirect($url);
 }
 
-function field_error($field_name) {
-
-    $sessionizer = new Sessionizer();
-
-    return $sessionizer->form_errors($field_name);
-}
 
 function http_method() {
 
