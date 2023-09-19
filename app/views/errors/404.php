@@ -14,8 +14,5 @@
 		<p class="psubtitle">
 			<a href="<?= base_url() ?>" class="link-home">Go Home</a>
 		</p>
- 
-		<p class="text-bottom">Memory Usage : <?php  echo $data['memory_usage']; ?> | PHP Version : <?php echo phpversion(); ?></p>
- 	
 	</body>
 </html>
