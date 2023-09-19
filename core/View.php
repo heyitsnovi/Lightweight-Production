@@ -6,8 +6,8 @@ use Core\Constants;
 
 class View {
 
-	private   $data = [];
-	private  $pageVars = [];
+	private  $data = [];
+	private  $page_vars = [];
 
 
 	public  function __construct($view, $data = [], $http_headers = []){
@@ -18,13 +18,13 @@ class View {
 
 					foreach ($data as $key => $value) {
 						
-						$this->pageVars[$key] = $value;
+						$this->page_vars[$key] = $value;
 					}
 				}
 
 				if(file_exists(Constants::views_dir().'/'. $view .'.php')){
 					
-					extract($this->pageVars);
+					extract($this->page_vars);
 					ob_start();
 					require_once Constants::views_dir().'/'. $view .'.php';
 					echo ob_get_clean();
