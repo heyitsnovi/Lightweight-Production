@@ -58,6 +58,14 @@ function get_flash($key) {
 
 }
 
+
+function has_session($key){
+
+     $sessionizer = new Sessionizer();
+
+    return $sessionizer->hasSession($key);
+}
+
 function anti_xss($input) {
 
     $xss_cleaner = new AntiXSS();

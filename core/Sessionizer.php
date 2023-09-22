@@ -62,5 +62,17 @@ class Sessionizer {
 	
 	}
 
-	 
+
+	public function hasSession($key){
+
+		if(isset($_SESSION[$key])){
+
+				return TRUE;
+
+			}else{
+
+				return FALSE;
+			}
+	}
+
 }
