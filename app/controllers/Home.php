@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-use Core\View;
-use Core\Constants;
-use Core\Renderer;
 
-class Home {
+use Core\Constants;
+use Core\Basecontroller;
+
+class Home extends Basecontroller {
 
     public function __construct(){
          
@@ -15,7 +15,7 @@ class Home {
     public function index() {
 
         //Display the page in the browser
-        new View('default', [
+        $this->view('default', [
             'memory_usage'=> Constants::get_memory_usage(),
             'title'=> 'Home - LightWeight MVC'
         ]);

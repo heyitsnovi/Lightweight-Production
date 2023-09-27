@@ -2,15 +2,15 @@
 
 namespace App\Controllers;
 
-use Core\View;
 use Core\Constants;
+use Core\Basecontroller;
 
-class Error{
+class Error extends Basecontroller{
 
 
 	public function notFound(){
 
-		new View('errors/404',['title'=>'Error 404','memory_usage'=> Constants::get_memory_usage()]);
+		$this->view('errors/404',['title'=>'Error 404','memory_usage'=> Constants::get_memory_usage()]);
 		
 	}
 }
