@@ -9,10 +9,12 @@
 	<body>
 		<div class="msg404">
 			<h1>404</h1>
+			<div class="inner-div">
+				<p class="small">Page Not Found</p>
+				<p class="psubtitle">
+					<a href="<?= base_url() ?>" class="link-home">Go Home</a>
+				</p>
+			</div>
 		</div>
-		<p class="small">Page Not Found</p>
-		<p class="psubtitle">
-			<a href="<?= base_url() ?>" class="link-home">Go Home</a>
-		</p>
 	</body>
 </html>

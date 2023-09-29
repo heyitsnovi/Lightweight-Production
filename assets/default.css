@@ -20,6 +20,7 @@ body{
 .small{
     text-align: center;
     color: whitesmoke;
+    font-size: 15px;
 }
 .link-github{
     color: whitesmoke;
@@ -40,4 +41,8 @@ body{
     font-size: 36px;
     margin-top: 100px;
     color: whitesmoke;
+}
+
+.inner-div{
+    margin-top: -40px;
 }
