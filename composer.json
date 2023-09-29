@@ -11,7 +11,8 @@
             "App\\Controllers\\": "app/controllers",
             "Core\\Models\\":       "app/models",
             "Core\\":"core/",
-            "Libraries\\":"app/libraries"
+            "Libraries\\":"app/libraries",
+            "Config\\":"app/config"
         }
     },
 	"require": {

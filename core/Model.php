@@ -3,7 +3,7 @@
 namespace Core; 
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Core\Constants;
+use Config\Database;
 
  
 class Model {
@@ -11,16 +11,16 @@ class Model {
         public function __construct() {
 
         $capsule = new Capsule();
-        $capsule->addConnection([
-             'driver' =>    'mysql',
-             'host' =>      Constants::DBConfig('MYSQL_HOST'),
-             'database' =>  Constants::DBConfig('MYSQL_DATABASE'),
-             'username' =>  Constants::DBConfig('MYSQL_USERNAME'),
-             'password' =>  Constants::DBConfig('MYSQL_PASSWORD'),
-             'charset' =>   Constants::DBConfig('MYSQL_CHARSET'),
-             'collation' => Constants::DBConfig('MYSQL_COLLATION'),
-             'prefix' =>    Constants::DBConfig('MYSQL_PREFIX'),
-        ]);
+        
+        $db_config = new Database();
+ 
+
+        foreach($db_config->configList() as $key =>$database_config){
+              
+            $capsule->addConnection($database_config,$key);
+
+        }
+
         // Setup the Eloquent ORM… 
         $capsule->setAsGlobal(); 
         $capsule->bootEloquent();
