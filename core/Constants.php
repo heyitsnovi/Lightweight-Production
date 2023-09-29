@@ -36,4 +36,16 @@ class Constants{
 
 		return str_replace('core','app/views',__DIR__);
 	}
+
+	public static function isDebugBarEnabled(){
+
+		$config = parse_ini_file('././.env');
+
+		if($config['ENABLE_DEBUG_BAR'] == 'true'){
+			return TRUE;
+		}else{
+			return FALSE;
+		}
+
+	}
 }

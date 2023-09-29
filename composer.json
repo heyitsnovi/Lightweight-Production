@@ -1,10 +1,11 @@
 {
-	"autoload": {
+    "autoload": {
         "classmap": [
            
         ],
         "files":[
-           "core/Helper.php"
+           "core/Helper.php",
+           "app/config/constants.php"
         ],
         "psr-4": {
             "App\\": "app/",
@@ -15,12 +16,13 @@
             "Config\\":"app/config"
         }
     },
-	"require": {
-		"bramus/router": "~1.6",
-		"illuminate/database": "^8.83",
-		"illuminate/events": "^8.83",
-		"rakit/validation": "^1.4",
-		"voku/anti-xss": "^4.1",
-        "twig/twig":"^3.0"
-	}
+    "require": {
+        "bramus/router": "~1.6",
+        "illuminate/database": "^8.83",
+        "illuminate/events": "^8.83",
+        "rakit/validation": "^1.4",
+        "voku/anti-xss": "^4.1",
+        "twig/twig":"^3.0",
+        "maximebf/debugbar": "^1.19"
+    }
 }
