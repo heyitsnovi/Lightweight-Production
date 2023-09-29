@@ -12,7 +12,7 @@
 		</div>
 		<p class="small">A Lightweight PHP MVC Framework</p>
 		<p class="psubtitle">
-			<a target="_blank" href="https://github.com/heyitsnovi/LightWeight" class="link-github">View Project On Github</a>
+			<a target="_blank" href="https://github.com/heyitsnovi/LightWeight-Production" class="link-github">View Project On Github</a>
 		</p>
  
 		<p class="text-bottom">Memory Usage : <?php  echo $memory_usage; ?> | PHP Version : <?php echo phpversion(); ?></p>
