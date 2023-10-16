@@ -42,7 +42,7 @@ function set_flash_data($key, $value) {
 
 }
 
-function get_session($key, $value) {
+function get_session($key) {
 
     $sessionizer = new Sessionizer();
 
