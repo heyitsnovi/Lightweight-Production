@@ -18,7 +18,9 @@ class View {
 
 		
 			if(Constants::isDebugBarEnabled()){
+				
 				echo $debugbarRenderer->renderHead();
+				
 			}
 
 		try {
