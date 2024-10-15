@@ -4,17 +4,17 @@
 use Core\Router;
 
 $router = Router::createRoutes();
- 
+$router->setNamespace('\App\Controllers');
 
 // define your routes here 
 //===============================================================
 
-$router->get('/','\App\Controllers\Home@index');
+$router->get('/','Home@index');
 
 //===============================================================
 
 //  define your 404 page handler :
-$router->set404('\App\Controllers\Error@notFound');
+$router->set404('Error@notFound');
 
 //===============================================================
 
