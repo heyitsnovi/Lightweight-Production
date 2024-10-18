@@ -4,6 +4,7 @@ namespace Core;
 
 use Core\View;
 use Core\Twigified;
+use Rakit\Validation\Validator;
 
 class Basecontroller{
 
@@ -25,4 +26,11 @@ class Basecontroller{
 
         echo $this->twig_view->view()->render($template,$data);
     }
+
+    public function form_validation(){
+
+        return new Validator();
+
+    }
+
 }
