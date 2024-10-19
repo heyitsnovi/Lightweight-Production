@@ -2,15 +2,13 @@
 
 namespace App\Controllers;
 
-
-use Core\Constants;
 use Core\Basecontroller;
-use Core\Helper;
 
 class Home extends Basecontroller {
 
     public function __construct(){
          
+
     }
 
     public function index() {
