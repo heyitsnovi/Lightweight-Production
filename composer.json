@@ -23,6 +23,7 @@
         "rakit/validation": "^1.4",
         "voku/anti-xss": "^4.1",
         "twig/twig":"^3.0",
-        "maximebf/debugbar": "^1.19"
+        "maximebf/debugbar": "^1.19",
+        "odan/session": "^6.2"
     }
 }

@@ -4,75 +4,65 @@ namespace Core;
 
 class Sessionizer {
 
+	private $session;
+
+	public function __construct(){
+
+		$config = [
+		    'name' => 'lightweight_app',
+		];
+
+		$this->session = new \Odan\Session\PhpSession($config);
+
+		if(session_status() == PHP_SESSION_NONE){
+
+			$this->session->start();
+
+		}
+
+	 
+	}
+
 	public function set_session($session_key,$session_value){
 
-		if(!isset($_SESSION[$session_key])  OR $_SESSION[$session_key] === null){
-			 
-			$_SESSION[$session_key]	= $session_value;
-			 
-		}else{
-
-			$_SESSION[$session_key]	= $session_value;
-		}
+ 		$this->session->set($session_key,$session_value);
 	}
 
 
 	public function get_session($session_key){
 
-			if(isset($_SESSION[$session_key])){
-
-				return $_SESSION[$session_key];
-			
-			}else{
-
-				return NULL;
-			}
+		return $this->session->get($session_key);
 	}
 
 	public function set_flash($session_key,$session_value){
 
-		if(!isset($_SESSION[$session_key]) OR $_SESSION[$session_key] === null){
-			 $_SESSION[$session_key]	= $session_value;
-		}else{
-			 $_SESSION[$session_key]	= $session_value;
-		}	
+	 	return $this->session->getFlash()->add($session_key, $session_value);
 	}
 
 	public   function get_flash($session_key){
 
-		$flash_message = isset($_SESSION[$session_key]) ? $_SESSION[$session_key] : '';
-		unset($_SESSION[$session_key]);
-		return $flash_message;
-
+		return $this->session->getFlash()->get($session_key);
 	}
 
 
 	public function input_value($key){
 
-			if(isset($_SESSION['post_data_'.$key])){
+		if(isset($_SESSION['post_data_'.$key])){
 
-				$val = $_SESSION['post_data_'.$key];
+			$val = $_SESSION['post_data_'.$key];
 
-				return $val;
+			return $val;
 
-			}else{
+		}else{
 
-				return NULL;
-			}
-	
+			return NULL;
+		}
+
 	}
-
 
 	public function hasSession($key){
 
-		if(isset($_SESSION[$key])){
-
-				return TRUE;
-
-			}else{
-
-				return FALSE;
-			}
+		 return $this->session->has('foo');
 	}
 
 }

@@ -36,13 +36,4 @@ class Redirector{
 		exit;
 	}
 
-
-	public  function redirectWithErrors($url,$errors = []){
-
-		Sessionizer::set_flash('lightweight_form_errors',is_object($errors) ? $errors->toArray() : []);
-		header('location:'.$url);
-		exit;
-	
-	}
-
 }
