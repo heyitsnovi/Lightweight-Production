@@ -24,6 +24,7 @@
         "voku/anti-xss": "^4.1",
         "twig/twig":"^3.0",
         "maximebf/debugbar": "^1.19",
-        "odan/session": "^6.2"
+        "odan/session": "^6.2",
+        "filp/whoops": "^2.16"
     }
 }

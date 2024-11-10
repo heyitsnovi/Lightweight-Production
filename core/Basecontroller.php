@@ -8,13 +8,19 @@ use Rakit\Validation\Validator;
 use Core\Helper;
 use Core\Constants;
 
-class Basecontroller{
+class BaseController{
 
     private $view;
     private $twig_view;
+    private $constants;
+ 
 
     public function __construct(){
-    	
+    
+        $whoops = new \Whoops\Run;
+        $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+        $whoops->register();
+
     }
 
     public function view($view_file , $data=[] ,$http_headers =[]){
@@ -33,6 +39,18 @@ class Basecontroller{
 
         return new Validator();
 
+    }
+
+    public function constantInstance(){
+
+        return new Constants();
+    }
+
+    public function getMemoryUsage(){
+
+            $constants = new Constants();
+
+            return $constants::get_memory_usage();
     }
 
 }

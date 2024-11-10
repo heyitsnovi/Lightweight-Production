@@ -46,9 +46,7 @@ class View {
 					echo ob_get_clean();
 
 				}else{
-					http_response_code(500);
-					die('<span style="color:red;">View File : Views/ '. $view .'.php was not found </span>');
-
+					throw new \Exception('View File : Views/ '. $view .'.php was not found.');
 				}
 
 				if(Constants::isDebugBarEnabled()){
