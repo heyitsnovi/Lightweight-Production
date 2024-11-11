@@ -13,9 +13,13 @@ class BaseController{
     private $view;
     private $twig_view;
     private $constants;
+    private $env_config;
  
 
     public function __construct(){
+
+
+        $this->env_config = parse_ini_file('././.env');
     
         $whoops = new \Whoops\Run;
         $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);

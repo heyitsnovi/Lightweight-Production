@@ -50,11 +50,11 @@ function get_session($key) {
 
 }
 
-function get_flash($key) {
+function get_flash($key,$index=0) {
 
     $sessionizer = new Sessionizer();
 
-    return $sessionizer->get_flash($key);
+    return $sessionizer->get_flash($key,$index);
 
 }
 
@@ -256,4 +256,5 @@ function current_url(){
     
     $url_instance = new Url();
     return $url_instance->current_url();
+    
 }
