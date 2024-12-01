@@ -68,9 +68,10 @@ function has_session($key){
 
 function anti_xss($input) {
 
-    $xss_cleaner = new AntiXSS();
-
-    return $xss_cleaner->xss_clean($input);
+    $purifier = new \HTMLPurifier(\HTMLPurifier_Config::createDefault());
+    
+    return $purifier->purify($input);
+ 
 }
 
 function input_value($key) {
