@@ -5,7 +5,7 @@
         ],
         "files":[
            "core/Helper.php",
-           "app/config/constants.php"
+           "app/config/Constants.php"
         ],
         "psr-4": {
             "App\\": "app/",

@@ -52,9 +52,9 @@ class BaseController{
 
     public function getMemoryUsage(){
 
-            $constants = new Constants();
+        $constants = new Constants();
 
-            return $constants::get_memory_usage();
+        return $constants::get_memory_usage();
     }
 
 }
